@@ -1,0 +1,13 @@
+version: '3'
+networks: 
+  pjcache:
+services:
+  pjcache:
+    container_name: pjcache
+    build:
+      dockerfile: Dockerfile
+      context: .
+    networks: 
+      - pjcache
+    ports:
+      - 14000:80
