@@ -20,4 +20,5 @@ func validarCNPJAux(cnpj string, pesos []uint8) bool {
 	numero := cnpj[i+1] - zero
 	digito := 11 - (soma % 11)
 	return digito == numero
+	njkhjkljklj
 }
