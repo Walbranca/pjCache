@@ -12,5 +12,6 @@
 *.out
 
 # Conteiners Data
-.postgres_data/
+.temp/
 .pgadmin_data/
+.postgres_data/

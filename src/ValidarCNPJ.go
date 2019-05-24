@@ -1,4 +1,4 @@
-package src
+package main
 
 const zero = uint8(48)
 

@@ -33,7 +33,7 @@ services:
   # pgadmin for database control and view data
   pjcache_pgadmin:
     container_name: pjcache_pgadmin
-    image: dpage/pgadmin
+    image: dpage/pgadmin4
     environment:
       - PGADMIN_DEFAULT_EMAIL=postgres@x14
       - PGADMIN_DEFAULT_PASSWORD=postgres
