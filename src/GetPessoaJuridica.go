@@ -1,4 +1,4 @@
-package main
+package src
 
 func GetPessoaJuridica(cnpj string) (pj PessoaJuridica, erro error) {
 	Database.GetConexao().Where("cnpj_sem_mascara = ?", cnpj).First(&pj)

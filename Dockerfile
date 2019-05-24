@@ -1,12 +1,14 @@
 FROM golang
 
-WORKDIR /app
 
-COPY go-get.sh /app/go-get.sh
+WORKDIR /app/scripts
+COPY scripts .
 RUN sh go-get.sh
 
-COPY . /app
-RUN go build -o app .
-CMD [ "./app" ]
+WORKDIR /go/src
+COPY .temp/private-repositories .
+
+WORKDIR /app/src
+ENTRYPOINT [ "go", "run", "." ]
 
 EXPOSE 80

@@ -1,4 +1,4 @@
-package main
+package src
 
 type ReceitaWS struct {
 	Status                string      `json:"status"`                 // Indica a situação da requisição. Valores possíveis: OK, ERROR.

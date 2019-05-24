@@ -2,5 +2,9 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/.go-private-repositories/github.com/xMota14/postgresAux" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/.go-private-repositories/github.com/xMota14/postgresAux/postgresAux" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/.temp/github.com/xMota14/postgresAux" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/.temp/private-repositories/github.com/xMota14/postgresAux" vcs="Git" />
   </component>
 </project>

@@ -1,13 +1,45 @@
 version: '3'
-networks: 
+
+networks:
+  # app network
   pjcache:
+
 services:
+
+  # app service on port: 14000
   pjcache:
     container_name: pjcache
     build:
       dockerfile: Dockerfile
       context: .
+    volumes:
+      - ./src:/app/src
     networks: 
       - pjcache
     ports:
-      - 14000:80
+      - 127.0.0.1:14000:80
+
+  # postgres database
+  pjcache_postgres:
+    container_name: pjcache_postgres
+    image: postgres
+    environment:
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
+    networks:
+      - pjcache
+
+  # pgadmin for database control and view data
+  pjcache_pgadmin:
+    container_name: pjcache_pgadmin
+    image: dpage/pgadmin
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=postgres@x14
+      - PGADMIN_DEFAULT_PASSWORD=postgres
+    volumes:
+      - ./.pgadmin_data:/var/lib/pgadmin
+    networks:
+      - pjcache
+    ports:
+      - 127.0.0.1:14001:80
